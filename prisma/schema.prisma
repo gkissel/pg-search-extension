@@ -12,7 +12,6 @@ datasource db {
   provider = "postgresql"
 }
 
-
 model User {
   id   String @id
   name String
@@ -25,7 +24,7 @@ model User {
   createdAt DateTime
   updatedAt DateTime
 
-  role      String?
+  role String?
 
   @@unique([email])
   @@index([id, name, email], map: "user_search_idx")

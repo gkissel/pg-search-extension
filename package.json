@@ -1,34 +1,36 @@
 {
-  "name": "pg-search-extension",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "vitest run",
-    "db:up": "docker compose up -d",
-    "db:down": "docker compose down -v",
-    "prisma:generate": "prisma generate",
-    "db:push": "prisma db push",
-    "db:setup-search": "prisma db execute --file prisma/setup-paradedb.sql --schema prisma/schema.prisma",
-    "test:watch": "vitest"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
-  "dependencies": {
-    "@prisma/adapter-pg": "^7.5.0",
-    "@prisma/client": "^7.5.0",
-    "@t3-oss/env-core": "^0.13.10",
-    "dotenv": "^17.3.1",
-    "pg": "^8.20.0",
-    "zod": "^4.3.6"
-  },
-  "devDependencies": {
-    "@faker-js/faker": "^10.3.0",
-    "@types/node": "^25.5.0",
-    "prisma": "^7.5.0",
-    "typescript": "^5.9.3",
-    "vitest": "^4.1.0"
-  }
+	"name": "pg-search-extension",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "vitest run",
+		"db:up": "docker compose up -d",
+		"db:down": "docker compose down -v",
+		"prisma:generate": "prisma generate",
+		"db:push": "prisma db push",
+		"test:watch": "vitest",
+		"lint": "biome lint --write"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "module",
+	"dependencies": {
+		"@prisma/adapter-pg": "^7.5.0",
+		"@prisma/client": "^7.5.0",
+		"@t3-oss/env-core": "^0.13.10",
+		"dotenv": "^17.3.1",
+		"pg": "^8.20.0",
+		"zod": "^4.3.6"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.6",
+		"@faker-js/faker": "^10.3.0",
+		"@types/node": "^25.5.0",
+		"prisma": "^7.5.0",
+		"tinyexec": "^1.0.4",
+		"typescript": "^5.9.3",
+		"vitest": "^4.1.0"
+	}
 }
